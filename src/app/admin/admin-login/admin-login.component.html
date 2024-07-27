@@ -1,1 +1,31 @@
-<p>admin-login works!</p>
+<!-- login form -->
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <!-- <img src="https://www.clipartmax.com/png/small/290-2908659_login-icon-png-free-user-access-icon.png" id="icon" alt="User Icon" /> -->
+         <h2>Admin Login Panel</h2>
+      </div>
+  
+      <!-- Login Form -->
+      <form name="form" #tf="ngForm" (ngSubmit)="tf.form.valid && onSubmitSignIn()" novalidate>
+        <input type="email"  class="fadeIn second"
+         name="userEmail" placeholder="Enter Username or Email"
+         [(ngModel)]="signInFormValue.userEmail" #userEmail="ngModel" required>
+        
+         <input type="password"  class="fadeIn second"
+         name="userPassword" placeholder="Enter Password"
+         [(ngModel)]="signInFormValue.userPassword" #userPassword="ngModel" minlength="6" required togglePassword>
+
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+  
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+</div>

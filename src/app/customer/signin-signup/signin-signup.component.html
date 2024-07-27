@@ -1,145 +1,152 @@
-<div class="jumbotron">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 offset md-3">
-                <h3>Registraion Angular 17 Reactive form  with validation</h3>
-                <form action="">
-                    <div class="form-group">
-                      <label for="name">Name</label>
-                      <input type="text" class="form-control" formControlName="name" placeholder="Enter name">
-                    </div>
-                    <div class="form-group">
-                        <label for="mobile">Mobile Number</label>
-                        <input type="text" class="form-control" formControlName="mobNumber" placeholder="Enter mobile number">
-                    </div>
+<!-- Sign up form -->
+<div class="wrapper fadeInDown" *ngIf="regForm">
+    <div class="regformContent">
+        <!-- Tabs Titles -->
 
-                    <div class="form-group">
-                        <label for="agr">Age</label>
-                        <input type="text" class="form-control" formControlName="age" placeholder="Enter age">
-                    </div>
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <h2>Registraion Angular 17 Reactive form with validation</h2>
+        </div>
+        <form [formGroup]="signUpform" (ngSubmit)="onSubmitedSignUp()">
 
-                    <div class="form-group">
-                        <label for="dob">Enter your DOB</label>
-                        <input type="date" class="form-control" formControlName="dob" placeholder="Enter Date of birth">
-                    </div>
-
+            <div class="row">
+                <div class="row">
+                    <div class="col-md-3"><input type="text" class="form-control" formControlName="name"
+                            placeholder="Enter name"></div>
+                    <div class="col-md-3"><input type="text" class="form-control" formControlName="mobNumber"
+                            placeholder="Enter mobile number"></div>
+                    <div class="col-md-3"><input type="text" class="form-control" formControlName="age"
+                            placeholder="Enter age"></div>
+                    <div class="col-md-3"><input type="date" class="form-control" formControlName="dob"
+                            placeholder="Enter Date of birth"></div>
+                </div>
+    
                 <!---- new row  --------->
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="email">Email</label>
+                <div class="row">
+                    <div class="col-md-3">
                         <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
                     </div>
-
-                    <div class="form-group col-md-6">
-                        <label for="password">Password</label>
+    
+                    <div class="col-md-3">
                         <input type="password" class="form-control" formControlName="password" placeholder="Enter Password">
                     </div>
-
-                    <div class="form-group ">
-                        <label for="address1">Address 1</label>
-                        <input type="text" class="form-control" formControlName="addLine1" placeholder="12,1 street">
-                    </div>
-
-                    <div class="form-group ">
-                        <label for="address2">Address 2</label>
-                        <input type="text" class="form-control" formControlName="addLine2" placeholder="appartments, floor">
-                    </div>
                 </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="city">City</label>
+                <div class="row">
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" formControlName="addLine1"
+                            placeholder="Address 1, 12,1 street">
+                    </div>
+    
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" formControlName="addLine2"
+                            placeholder="Address 2,appartments, floor">
+                    </div>
+    
+                    <div class="col-md-3">
                         <input type="text" class="form-control" formControlName="city" placeholder="Enter City">
                     </div>
-
-                    <div class="form-group col-md-4">
+    
+                    <div class="col-md-3">
+                        <input type="text" class="form-control" formControlName="zipCode" placeholder="Enter Zip code">
+    
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="col-md-3">
                         <label for="state">State</label>
-                        <select class="form-control" id="inputState" formControlName="state">
+                        <select class="form-control multiple" id="inputState" formControlName="state">
                             <option selected>Chose...</option>
-                            <option value="">............</option>
+                            <option value="kpk">............</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="language">Language</label>
+                        <select  class="form-control multiple" formControlName="language">
+                            <option value="Pushto">Pushto</option>
+                            <option value="Urdu">Urdu</option>
+                            <option value="English">English</option>
                         </select>
                     </div>
 
-                    <div class="form-group col-md-2">
-                        <label for="zipcode">Zip Code</label>
-                        <input type="text" class="form-control" formControlName="zipCode" placeholder="Enter Zip code">
+                    <div class="col-md-3">
+                        <label for="role">What do you want?</label>
+                        <select class="form-control multiple" formControlName="role">
+                            <option value="seller">Seller</option>
+                            <option value="buyer">Buyer</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="gender">gender</label>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-inline" formControlName="gender" value="Male">
+                            <label for="male" class="form-check-inline">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-inline" formControlName="gender" value="Female">
+                            <label for="female" class="form-check-inline">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-inline" formControlName="gender" value="Other">
+                            <label for="other" class="form-check-inline">Other</label>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="aboutYou">Some Thing about you</label>
+                        <textarea class="form-control" rows="3" formControlName="aboutYou"></textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="uploadPhoto">Upload Phote</label>
+                        <input type="file" class="form-control" formControlName="uploadPhoto">
+                    </div>
+                    <div class="col-md-2">
+                        <input type="checkbox" class="form-check-inline" formControlName="agreetc">
+                        <label for="agreetc" class="form-check-inline">Tearm & Condition</label>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label for="language">Language</label>
-                    <select multiple class="form-control"  formControlName="language">
-                        <option>Pushto</option>
-                        <option>Urdu</option>
-                        <option>English</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="gender">Gender</label>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-inline" formControlName="gender" value="Male">
-                        <label for="male" class="form-check-inline">Male</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-inline" formControlName="gender" value="Female">
-                        <label for="female" class="form-check-inline">Female</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input type="radio" class="form-check-inline" formControlName="gender" value="Other" disabled>
-                        <label for="other" class="form-check-inline">Other</label>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="someThingAboutYou">Some Thing about you</label>
-                    <textarea name="" id="" class="form-control" rows="3" formControlName="aboutYou"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="dob">Upload Phote</label>
-                    <input type="file" class="form-control" formControlName="uploadPhoto">
-                </div>
-                <div class="form-group">
-                    <input type="checkbox" class="form-check-inline" formControlName="agreetc">
-                    <label for="agreetc" class="form-check-inline">Tearm & Condition</label>
-                </div>
-
-                <div class="form-group">
-                    <label for="role">What do you want?</label>
-                    <select class="form-control"  formControlName="role">
-                        <option value="seller">Seller</option>
-                        <option value="buyer">Buyer</option>
-                    </select>
-                </div>
-                <hr>
-                <div class="form-group">
-                   <button class="btn btn-primary">Register</button>
-                </div>
-
-                </form>
-
-                <!---- Login form  --------->
-                <p class="sim-pointer" routerLink="/sign-in" >Already have account click here to login</p>
+    
             </div>
+            <input type="submit" class="fadeIn fourth" value="Register">
+        </form>
 
-            <div class="col-md-12 offset md-3">
-                <h3>Login Angular 17 Template Driven form  with validation</h3>
-                <form action="">
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" name="userEmail" class="form-control" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" name="userPassword" class="form-control" placeholder="Enter password">
-                    </div>
-
-                    <div class="form-group">
-                        <button class="btn btn-primary">Login</button>
-                    </div>
-                </form>
-                <p class="sim-pointer" routerLink="/sign-up" >Don’t have an account click here to Register</p>
-            </div>
+        <div id="formFooter">
+            <a class="underlineHover" routerLink="/sign-in">Already have account click here to login</a>
         </div>
+
+    </div>
 </div>
 
 
+<!-- LOGIN FORM -->
+<div class="wrapper fadeInDown" *ngIf="!regForm">
+    <div id="formContent">
+        <!-- Tabs Titles -->
 
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <h2>Login form using template driven form</h2>
+        </div>
+
+        <!-- Login Form -->
+        <form name="form" #tf="ngForm" (ngSubmit)="tf.form.valid && onSubmitSignIn()" novalidate>
+            <input type="email" class="fadeIn second" name="userEmail" placeholder="Enter Username or Email"
+                [(ngModel)]="signInFormValue.userEmail" #userEmail="ngModel" required>
+
+            <input type="password" class="fadeIn second" name="userPassword" placeholder="Enter Password"
+                [(ngModel)]="signInFormValue.userPassword" #userPassword="ngModel" minlength="6" required
+                togglePassword>
+
+            <input type="submit" class="fadeIn fourth" value="Log In">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" routerLink="/sign-up">Don’t have an account click here to Register</a>
+        </div>
+
+    </div>
+</div>

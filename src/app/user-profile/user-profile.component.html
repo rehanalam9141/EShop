@@ -1,1 +1,107 @@
-<p>user-profile works!</p>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <form [formGroup]="userProfileForm" (ngSubmit)="updateProfile()">
+
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-md-12"><input type="text" class="form-control" formControlName="name"
+                                        placeholder="Enter name"></div>
+                                <div class="col-md-12"><input type="text" class="form-control" formControlName="mobNumber"
+                                        placeholder="Enter mobile number"></div>
+                                <div class="col-md-12"><input type="text" class="form-control" formControlName="age"
+                                        placeholder="Enter age"></div>
+                                <div class="col-md-12"><input type="date" class="form-control" formControlName="dob"
+                                        placeholder="Enter Date of birth"></div>
+                            </div>
+                
+                            <!---- new row  --------->
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="email" class="form-control" formControlName="email" placeholder="Enter email">
+                                </div>
+                
+                                <div class="col-md-12">
+                                    <input type="password" class="form-control" formControlName="password" placeholder="Enter Password">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" formControlName="addLine1"
+                                        placeholder="Address 1, 12,1 street">
+                                </div>
+                
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" formControlName="addLine2"
+                                        placeholder="Address 2,appartments, floor">
+                                </div>
+                
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" formControlName="city" placeholder="Enter City">
+                                </div>
+                
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" formControlName="zipCode" placeholder="Enter Zip code">
+                
+                                </div>
+                            </div>
+                
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="state">State</label>
+                                    <select class="form-control multiple" id="inputState" formControlName="state">
+                                        <option selected>Chose...</option>
+                                        <option>KPK</option>
+                                        <option>Punjab</option>
+                                        <option>Sindh</option>
+                                        <option>Balochistan</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="language">Language</label>
+                                    <select  class="form-control multiple" formControlName="language">
+                                        <option value="Pushto">Pushto</option>
+                                        <option value="Urdu">Urdu</option>
+                                        <option value="English">English</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="gender">gender</label>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-inline" formControlName="gender" value="Male">
+                                        <label for="male" class="form-check-inline">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-inline" formControlName="gender" value="Female">
+                                        <label for="female" class="form-check-inline">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input type="radio" class="form-check-inline" formControlName="gender" value="Other">
+                                        <label for="other" class="form-check-inline">Other</label>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="aboutYou">Some Thing about you</label>
+                                    <textarea class="form-control" rows="3" formControlName="aboutYou"></textarea>
+                                </div>
+                                <div class="col-md-12">
+                                    <label for="uploadPhoto">Upload your profile Photo</label>
+                                    <input type="file" class="form-control" formControlName="uploadPhoto">
+                                </div>
+                            </div>
+                
+                        </div>
+                        <!-- <input type="submit" class="fadeIn fourth" value="Register"> -->
+                         <button class="btn btn-primary">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

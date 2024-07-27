@@ -7,10 +7,15 @@ import { catchError, Observable, throwError } from 'rxjs';
 })
 export class ApiService {
 
-  httpOption = {
+  httpOptions ={
     headers: new HttpHeaders({
-      "Content-Type":"application/json",
-      "Access-Control-Allow-Origin":"*"
+      "Content-Type": "application/json",
+      //"Access-Control-Allow-Origin":"*"
+
+      //Request header field Access-Control-Allow-Origin is not allowed by Access-Control-Allow-Headers
+      // error means that Access-Control-Allow-Origin field of HTTP header is not handled or allowed by response. 
+      //Remove Access-Control-Allow-Origin field from the request header.
+      
     })
   }
 
@@ -25,11 +30,11 @@ export class ApiService {
   }
 
   put(path:string, body:Object={}):Observable<any>{
-    return this.http.put(path, JSON.stringify(body), this.httpOption).pipe(catchError(this.formatErrors))
+    return this.http.put(path, JSON.stringify(body), this.httpOptions).pipe(catchError(this.formatErrors))
   }
 
   post(path:string, body:Object={}):Observable<any>{
-    return this.http.post(path, JSON.stringify(body), this.httpOption).pipe(catchError(this.formatErrors))
+    return this.http.post(path, JSON.stringify(body), this.httpOptions).pipe(catchError(this.formatErrors))
   }
 
   delete(path:string):Observable<any>{
