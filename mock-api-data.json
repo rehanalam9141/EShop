@@ -84,6 +84,7 @@
       "dob": "1995-10-05",
       "email": "usman@gmail.com",
       "gender": "Male",
+      "agreetc": true,
       "address": {
         "id": 0,
         "addLine1": "bada",
@@ -99,7 +100,8 @@
       "name": "usman khan",
       "password": "123456",
       "uploadPhoto": "C:\\fakepath\\afsir_cnic-front.jpg",
-      "id": "055e"
+      "id": "055e",
+      "role": "buyer"
     },
     {
       "id": "8161",
@@ -349,6 +351,48 @@
       },
       "contact": "83685222555",
       "dateTime": "1/27/2024"
+    },
+    {
+      "id": 0,
+      "userId": 8161,
+      "sellerId": 2,
+      "product": {
+        "id": "2",
+        "name": "Water Bottle",
+        "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/bottle/w/5/g/1000-cello-h2o-cello-h2o-water-bottel-cello-original-imaeqtj3vyxyehmn.jpeg",
+        "mrp": "123",
+        "dp": "99",
+        "status": "publish"
+      },
+      "deliveryAddress": {
+        "id": 0
+      },
+      "contact": "03459506505",
+      "dateTime": "8/1/2024"
+    },
+    {
+      "id": 0,
+      "userId": 6905,
+      "sellerId": 2,
+      "product": {
+        "id": "3",
+        "name": "Metro Living Self Design Pillows Cover",
+        "uploadPhoto": "https://rukminim1.flixcart.com/image/832/832/jjsw4nk0/cushion-pillow-cover/e/z/z/epl12-metro-living-original-imaf7ah6zstjyevd.jpeg",
+        "productDesc": "Regional Speciality\nRajasthan\nFabric Care\nMachinne Wash, Do not Bleach, Wash in Cold Water\nThread Count\n104\nSales Package\nPack of 2 Pillow Cover",
+        "mrp": "500",
+        "dp": "399",
+        "status": "draft"
+      },
+      "deliveryAddress": {
+        "id": 0,
+        "addLine1": "balar khel",
+        "addLine2": "marghuz",
+        "city": "swabi",
+        "state": "kpk",
+        "zipCode": "23530"
+      },
+      "contact": "03135533954",
+      "dateTime": "8/1/2024"
     }
   ]
 }
