@@ -22,16 +22,16 @@
             <a class="nav-link disabled" routerLink="" >About Us</a>
           </li>
           <li class="nav-item" *ngIf="user_role == 'buyer'">
-            <a class="nav-link" routerLink="/my-order">Order Buyer</a>
+            <a class="nav-link" routerLink="/buyer-dashboard">Order</a>
           </li>
           <li class="nav-item" *ngIf="user_role == 'admin'">
-            <a class="nav-link " routerLink="/all-order">All Order Admin</a>
+            <a class="nav-link " routerLink="/all-order">All Order</a>
           </li>
           <li class="nav-item" *ngIf="user_role == 'seller'">
-            <a class="nav-link " routerLink="/seller/product">Products Seller</a>
+            <a class="nav-link " routerLink="/seller/product">Products</a>
           </li>
           <li class="nav-item" *ngIf="user_role == 'admin'">
-            <a class="nav-link " routerLink="/admin/product">All Products Admin</a>
+            <a class="nav-link " routerLink="/admin/product">All Products</a>
           </li>
           <li class="nav-item" *ngIf="user_role == 'admin'">
             <a class="nav-link " routerLink="/admin/user">Users Admin</a>
