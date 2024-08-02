@@ -294,13 +294,58 @@
       "status": "inactive"
     },
     {
+      "id": "14",
+      "name": "dummy",
+      "uploadPhoto": "www.google.com",
+      "productDesc": "this is dummy data",
+      "mrp": "2500",
+      "dp": "2000",
+      "status": "inactive"
+    },
+    {
       "id": "15",
-      "name": "Angular 17 tutorial",
-      "uploadPhoto": "https://ibb.co/d089hzh",
-      "productDesc": "This is an angular tutorial for beginners",
-      "mrp": "799",
-      "dp": "499",
-      "status": "publish"
+      "name": "sdfsd",
+      "uploadPhoto": "dfsd",
+      "productDesc": "sdfds",
+      "mrp": "sdfds",
+      "dp": "sdf",
+      "status": "darft"
+    },
+    {
+      "id": "16",
+      "name": "angular",
+      "uploadPhoto": "www.angular.com/image",
+      "productDesc": "angular is java script framword",
+      "mrp": "2500",
+      "dp": "200",
+      "status": "darft"
+    },
+    {
+      "id": 0,
+      "name": "lkdsjflaj",
+      "uploadPhoto": "sdlkfjsldfj",
+      "productDesc": "ksdjlfsdj",
+      "mrp": "sdkjf",
+      "dp": "sdfj",
+      "status": "inactive"
+    },
+    {
+      "id": "",
+      "name": "dfsdfs",
+      "uploadPhoto": "sdfsd",
+      "productDesc": "dsfsdfs",
+      "mrp": "656",
+      "dp": "56",
+      "status": "darft"
+    },
+    {
+      "id": 0,
+      "name": "HTML",
+      "uploadPhoto": "www.googel.com",
+      "productDesc": "thhis is dummyda data",
+      "mrp": "10000",
+      "dp": "5000",
+      "status": "inactive"
     }
   ],
   "orders": [
@@ -353,7 +398,7 @@
       "dateTime": "1/27/2024"
     },
     {
-      "id": 0,
+      "id": "0",
       "userId": 8161,
       "sellerId": 2,
       "product": {
@@ -371,7 +416,7 @@
       "dateTime": "8/1/2024"
     },
     {
-      "id": 0,
+      "id": "0",
       "userId": 6905,
       "sellerId": 2,
       "product": {
